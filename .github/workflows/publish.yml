@@ -19,4 +19,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           target-branch: 'master'
+      - run: echo "//npm.pkg.github.com/:_authToken=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" > ~/.npmrc
       - run: npm publish
