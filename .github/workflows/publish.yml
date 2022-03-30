@@ -9,6 +9,9 @@ jobs:
       !contains(github.event.head_commit.message, 'ci :version') &&
       github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - uses: actions/checkout@v2
       - name: Install Dependencies
