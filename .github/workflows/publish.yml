@@ -21,7 +21,7 @@ jobs:
           target-branch: 'master'
       - uses: actions/setup-node@v2
         with:
-          node-version: '16.x'
+          node-version-file: '.nvmrc'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@xl8-ai'
       - run: npm publish
