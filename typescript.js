@@ -51,6 +51,11 @@ module.exports = {
 
         // Allow no-null-assertion(!) for productivity.
         '@typescript-eslint/no-non-null-assertion': 'off',
+
+        // Let typescript handle switch.
+        '@typescript-eslint/switch-exhaustiveness-check': 'error',
+        'default-case': 'off',
+        'consistent-return': 'off',
       },
     },
   ],

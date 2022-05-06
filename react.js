@@ -12,8 +12,9 @@ module.exports = {
     // When used appropriately, nested ternary operator does not hurt readability.
     'no-nested-ternary': 'off',
 
-    // Don't need defaultProps in typescript.
+    // Don't need defaultProps or prop-types in typescript.
     'react/require-default-props': 'off',
+    'react/prop-types': 'off',
 
     // Allow props spreading.
     'react/jsx-props-no-spreading': 'off',
@@ -71,5 +72,18 @@ module.exports = {
       },
     ],
     'prefer-arrow-callback': ['error', { allowNamedFunctions: true }],
+
+    // Sometimes some props can intentionally have same name with different cases(e.g., InputProps and inputProps in material-ui).
+    'react/jsx-no-duplicate-props': ['error', { ignoreCase: false }],
+
+    // When used properly, these rather improve readability.
+    'no-unused-expressions': [
+      'error',
+      {
+        allowTaggedTemplates: true,
+        allowShortCircuit: true,
+        allowTernary: true,
+      },
+    ],
   },
 };
